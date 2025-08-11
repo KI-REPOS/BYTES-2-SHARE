@@ -1,0 +1,24 @@
+{% extends 'fileshare/base.html' %}
+{% load static %}
+{% block content %}
+<h3>Upload a File</h3>
+
+{% if success %}
+<div class="alert alert-success">✅ File uploaded successfully!</div>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data" id="upload-form">
+    {% csrf_token %}
+    <div class="mb-3">
+        <input type="file" name="file" id="fileInput" class="form-control">
+    </div>
+    <div class="progress mb-3" style="height: 25px;">
+        <div id="progress-bar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%">
+            0%
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Upload</button>
+</form>
+
+<script src="{% static 'fileshare/js/upload.js' %}"></script>
+{% endblock %}
