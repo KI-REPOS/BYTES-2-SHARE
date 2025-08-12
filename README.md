@@ -1,4 +1,4 @@
-# BYTE - Local Wi-Fi File Sharing Web App
+# @BYTE - Local Wi-Fi File Sharing Web App
 
 A Django-based local FTP-style file sharing application that lets devices connected to the same Wi-Fi network upload, share, and download files of **any type and size** directly from a centralized storage pool hosted on a laptop.
 
